@@ -1,0 +1,141 @@
+/* Global View aka Desktop View */
+body {
+  font-family: "Asap", sans-serif;
+  background-color: #ebebeb;
+  color: white;
+}
+.headerContainer {
+  background-color: darkslategrey;
+  position: fixed;
+  width: 100%;
+}
+header {
+  max-width: 1024px;
+  min-height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 10px;
+}
+.bold {
+  font-weight: 700;
+}
+a {
+  border: white solid 1px;
+  padding: 11px 20px;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.mobileWrapper {
+  display: none;
+}
+
+.container {
+  padding-top: 140px;
+  min-height: 500px;
+  max-width: 1024px;
+  margin: 0px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.col {
+  width: 30%;
+  margin-bottom: 40px;
+  background-color: rgb(36, 197, 122);
+}
+.col p {
+  font-size: 0.825rem;
+  padding: 10px 20px;
+  line-height: 1.125rem;
+}
+.col p::first-line {
+  font-weight: 700;
+}
+.hideDesktop {
+  display: none;
+}
+.col img {
+  width: 100%;
+  height: auto;
+}
+.footerContainer {
+  background-color: darkslategrey;
+  min-height: 100px;
+  margin-bottom: 40px;
+}
+footer {
+  max-width: 1024px;
+  min-height: 100px;
+  margin: 0 auto;
+}
+/* Tablet View */
+@media (max-width: 768px) {
+  h1 {
+    color: green;
+  }
+  .col {
+    width: 45%;
+  }
+  .hideDesktop {
+    display: block;
+  }
+  .headerContainer {
+    margin-bottom: 0px;
+    position: relative;
+  }
+  header {
+    text-align: center;
+  }
+  .mobileWrapper {
+    display: block;
+    padding-right: 75px;
+  }
+  .mobileNav {
+    display: none;
+    position: absolute;
+  }
+  .container {
+    padding: 20px;
+  }
+  nav {
+    display: none;
+  }
+  a {
+    display: block;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    margin-left: -80px;
+    background-color: tomato;
+  }
+  .logo {
+    padding: 20px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 400px) {
+  .col {
+    width: 100%;
+  }
+  .hideMobile {
+    display: none;
+  }
+  header {
+    display: block;
+  }
+  .mobileWrapper {
+    padding: 0;
+  }
+  .container {
+    padding: 0px;
+  }
+  .mobileNav {
+    margin-left: 50%;
+  }
+}
